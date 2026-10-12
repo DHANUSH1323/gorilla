@@ -105,7 +105,6 @@ class ClaudeHandler(BaseHandler):
         kwargs = {
             "model": self.model_name.strip("-FC"),
             "max_tokens": self._get_max_tokens(),
-            "temperature": self.temperature,
             "tools": inference_data["tools"],
             "messages": messages,
         }
@@ -256,7 +255,6 @@ class ClaudeHandler(BaseHandler):
         kwargs = {
             "model": self.model_name,
             "max_tokens": self._get_max_tokens(),
-            "temperature": self.temperature,
             "messages": inference_data["message"],
         }
 
